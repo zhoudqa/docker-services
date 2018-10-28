@@ -1,6 +1,7 @@
 version: '3'
 services:
   eureka-server:
+    build: ../eureka-server
     image: com.zhoudq/eureka-server
     ports:
       - "8761:8761"
@@ -8,6 +9,7 @@ services:
       - .:/tmp
 
   service-a:
+    build: ../service-a
     image: com.zhoudq/service-a
     ports:
       - "8001:8001"
