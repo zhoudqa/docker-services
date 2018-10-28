@@ -1,10 +1,15 @@
 spring:
   application:
-    name: service-a
+    name: gateway
   profiles:
     active: docker
+zuul:
+  routes:
+    service-a:
+      path: /service-a/**
+      service-id: service-a
 server:
-  port: 8001
+  port: 8000
 ---
 spring:
   profiles: docker
