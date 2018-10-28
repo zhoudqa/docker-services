@@ -1,0 +1,3 @@
+./docker-tasks/t*
+.gradle/
+.idea/
